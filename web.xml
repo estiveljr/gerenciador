@@ -6,8 +6,8 @@
   <distributable/>
 
   <servlet>
-  	<servlet-name>Hi</servlet-name>
-  	<servlet-class>org.openshift.examples.cluster1.Hi</servlet-class>
+  	<servlet-name></servlet-name>
+  	<servlet-class></servlet-class>
   </servlet>
 
 
