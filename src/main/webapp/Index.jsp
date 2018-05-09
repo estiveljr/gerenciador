@@ -11,7 +11,7 @@
 <h1>Gerenciador de estoque</h1>
 <form>
 <h2>Custo de falta</h2>
-<input tipe=text />
+<input type='text'/>
 <h2>Valor da Peça</h2>
 <h2>Taxa de armazenamento</h2>
 <h2>Consumo Médio</h2>
