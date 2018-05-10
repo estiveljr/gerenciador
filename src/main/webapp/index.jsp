@@ -24,7 +24,7 @@
 		<input name='estoqueLimite' type='text' /> 
 		<br /> 
 		<br /> 
-		<input type="submit" value="Calcular Estoque">
+		<input type="submit" value="Calcular">
 	</form>
 </body>
 </html>
