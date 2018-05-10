@@ -1,5 +1,3 @@
-
-
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -34,9 +32,9 @@ public class Controler extends HttpServlet {
 		String custoPedido = request.getParameter("custoPedido");
 		String estoqueLimite = request.getParameter("estoqueLimite");
 		
-		GerenciadorEstoque gerenciadorDeEstoque = new GerenciadorEstoque(
+/*		GerenciadorEstoque gerenciadorDeEstoque = new GerenciadorEstoque(
 				custoFalta, valorPeca, taxaArmazenamento, consumoMedio, custoPedido, estoqueLimite);
-		gerenciadorDeEstoque.calcular();
+		gerenciadorDeEstoque.calcular();*/
 		
 		request.getRequestDispatcher("resposta.jsp").forward(request, response);
 	}
