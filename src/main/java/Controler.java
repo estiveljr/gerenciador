@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import gerenciador.GerenciadorEstoque;
+
 /**
  * Servlet implementation class Controler
  */
@@ -24,15 +26,20 @@ public class Controler extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		String custoFalta = request.getParameter("custoFalta");
+		String valorPeca = request.getParameter("valorPeca");
+		String taxaArmazenamento = request.getParameter("taxaArmazenamento");
+		String consumoMedio = request.getParameter("consumoMedio");
+		String custoPedido = request.getParameter("custoPedido");
+		String estoqueLimite = request.getParameter("estoqueLimite");
+		
+		GerenciadorEstoque gerenciadorDeEstoque = new GerenciadorEstoque(
+				custoFalta, valorPeca, taxaArmazenamento, consumoMedio, custoPedido, estoqueLimite);
+		gerenciadorDeEstoque.calcular();
+		
+		request.getRequestDispatcher("resposta.jsp").forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
 
 }

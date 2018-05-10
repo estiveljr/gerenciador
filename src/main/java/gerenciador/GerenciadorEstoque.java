@@ -3,11 +3,11 @@ package gerenciador;
 import org.ejml.simple.SimpleMatrix;
 
 public class GerenciadorEstoque {
-	private int custoFalta;
-	private int valorPeca;
+	private double custoFalta;
+	private double valorPeca;
 	private double taxaArmazenamento;
-	private int consumoMedio;
-	private int custoPedido;
+	private double consumoMedio;
+	private double custoPedido;
 	private int estoqueLimite;
 	private SimpleMatrix custoDeArmazenagem;
 	private SimpleMatrix custoDePedir;
@@ -44,8 +44,8 @@ public class GerenciadorEstoque {
 	}
 	
 	// Construtor da classe
-	public GerenciadorEstoque(int custoFalta, int valorPeca,
-			double taxaArmazenamento, int consumoMedio, int custoPedido,
+	public GerenciadorEstoque(double custoFalta, double valorPeca,
+			double taxaArmazenamento, double consumoMedio, double custoPedido,
 			int estoqueLimite) {
 		this.custoFalta = custoFalta;
 		this.valorPeca = valorPeca;
@@ -183,7 +183,7 @@ public class GerenciadorEstoque {
 		}
     }
 	
-	protected double arredondar(double valor, int casas, int ceilOrFloor) {
+	protected double arredondar(double valor, float casas, float ceilOrFloor) {
 		double verif, arredondado = valor;
 		int multp = 1;
 		for (int i = 0; i < casas; i++)
